@@ -13,6 +13,7 @@ describe("Calculator", () => {
         });
 
     });
+
     describe("Subtraction function", () => {
        test("should return 12 for 22 - 10", () => {
             expect(subtraction(22, 10)).toBe(12);
@@ -21,6 +22,7 @@ describe("Calculator", () => {
         expect(subtraction(9, 10)).toBe(-1);
    });
     });
+
     describe("Multiplication function", () => {
         test("should return 24 for 2 x 12", () => {
             expect(multiplication(2, 12)).toBe(24);
@@ -29,7 +31,16 @@ describe("Calculator", () => {
             expect(multiplication(-8, -2)).toBe(16);
         });
     });
-    describe("Division function", () => {
 
+    describe("Division function", () => {
+        test("should return 4 for 8/2", () => {
+            expect(division(8,2)).toBe(4);
+        });
+        test("should return 2 for 14/4", () => {
+            expect(division(14,7)).toBe(2);
+        });
+        test("should return Cannot divide by zero for any number divided by 0", () => {
+            expect(division(2,0)).toBe("Cannot divide by 0!");
+        });
     });
 });
