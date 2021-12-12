@@ -14,7 +14,12 @@ describe("Calculator", () => {
 
     });
     describe("Subtraction function", () => {
-       
+       test("should return 12 for 22 - 10", () => {
+            expect(subtraction(22, 10)).toBe(12);
+       });
+       test("should return -1 for 9 - 10", () => {
+        expect(subtraction(9, 10)).toBe(-1);
+   });
     });
     describe("Multiplication function", () => {
 
