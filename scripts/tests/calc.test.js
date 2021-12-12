@@ -22,7 +22,12 @@ describe("Calculator", () => {
    });
     });
     describe("Multiplication function", () => {
-
+        test("should return 24 for 2 x 12", () => {
+            expect(multiplication(2, 12)).toBe(24);
+        });
+        test("should return 16 for -8 x -2", () => {
+            expect(multiplication(-8, -2)).toBe(16);
+        });
     });
     describe("Division function", () => {
 
